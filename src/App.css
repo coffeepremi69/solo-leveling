@@ -1,0 +1,63 @@
+/* Solo Leveling specific styles - most in index.css */
+
+/* Additional animations */
+@keyframes xpPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.pulse {
+  animation: xpPulse 0.5s ease-in-out;
+}
+
+/* Weight form */
+.weight-form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.weight-form input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid rgba(0,255,0,0.3);
+  border-radius: 5px;
+  background: rgba(20,20,40,0.8);
+  color: #fff;
+}
+
+.weight-list {
+  list-style: none;
+}
+
+.weight-list li {
+  padding: 0.5rem;
+  background: rgba(0,0,0,0.3);
+  margin: 0.25rem 0;
+  border-radius: 5px;
+}
+
+.timer-display {
+  font-size: 3rem;
+  font-family: monospace;
+  color: #00ff00;
+  text-shadow: 0 0 10px #00ff00;
+  margin: 1rem 0;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Responsive quote */
+.quote {
+  text-align: center;
+  font-style: italic;
+  color: #aaa;
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
