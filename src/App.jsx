@@ -8,6 +8,7 @@ import Timer from './components/Timer';
 import Popup from './components/Popup';
 import { loadState, saveState, getDefaultTasks } from './utils/storage';
 import { checkAchievements } from './utils/achievements';
+import { hasDailyActivity } from './utils/activity';
 import { playXPSound } from './utils/sounds';
 import './index.css'; // Global styles
 
@@ -75,7 +76,7 @@ function App() {
         ...prev,
         xp: prev.xp + task.xp,
         tasks: prev.tasks.map(t => t.name === task.name ? { ...t, completed: true } : t),
-        streak: prev.streak + 1
+        streak: hasDailyActivity(newState.tasks) ? 1 : 0  // Set streak to 1 if any task completed today
       };
       // Check achievements
       const newAch = checkAchievements(newState);

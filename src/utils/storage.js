@@ -46,17 +46,8 @@ const getDefaultTasks = () => ([
   { name: 'Wrist rehab', xp: 25, completed: false },
 ]);
 
-const calculateStreak = (lastReset) => {
-  // Simplified streak calc - increment if active previous day
-  try {
-    const prevDate = new Date(lastReset);
-    const today = new Date();
-    const diffDays = Math.floor((today - prevDate) / (1000 * 60 * 60 * 24));
-    return diffDays === 1 ? 1 : 0;
-  } catch {
-    return 0;
-  }
-};
+// Removed calculateStreak - streak managed in App on daily activity with tasks
+
 
 export { getDefaultTasks };
 
